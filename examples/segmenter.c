@@ -26,7 +26,8 @@ void train_segmenter(char *datacfg, char *cfgfile, char *weightfile, int *gpus, 
     network *net = nets[0];
     image pred = get_network_image(net);
 
-    int div = net->w/pred.w;
+    //int div = net->w/pred.w;
+    int div = 1;
     assert(pred.w * div == net->w);
     assert(pred.h * div == net->h);
 
@@ -46,7 +47,7 @@ void train_segmenter(char *datacfg, char *cfgfile, char *weightfile, int *gpus, 
     load_args args = {0};
     args.w = net->w;
     args.h = net->h;
-    args.threads = 32;
+    args.threads = 1;
     args.scale = div;
 
     args.min = net->min_crop;
@@ -57,7 +58,7 @@ void train_segmenter(char *datacfg, char *cfgfile, char *weightfile, int *gpus, 
     args.saturation = net->saturation;
     args.hue = net->hue;
     args.size = net->w;
-    args.classes = 80;
+    args.classes = 1;
 
     args.paths = paths;
     args.n = imgs;
@@ -158,7 +159,7 @@ void predict_segmenter(char *datafile, char *cfg, char *weights, char *filename)
         printf("Predicted: %f\n", predictions[0]);
         printf("%s: Predicted in %f seconds.\n", input, sec(clock()-time));
         show_image(sized, "orig", 1);
-        show_image(prmask, "pred", 0);
+        show_image(pred, "pred", 0);
         free_image(im);
         free_image(sized);
         free_image(prmask);
@@ -184,7 +185,7 @@ void demo_segmenter(char *datacfg, char *cfg, char *weights, int cam_index, cons
     }
 
     if(!cap) error("Couldn't connect to webcam.\n");
-    cvNamedWindow("Segmenter", CV_WINDOW_NORMAL); 
+    cvNamedWindow("Segmenter", CV_WINDOW_NORMAL);
     cvResizeWindow("Segmenter", 512, 512);
     float fps = 0;
 
@@ -204,7 +205,7 @@ void demo_segmenter(char *datacfg, char *cfg, char *weights, int cam_index, cons
         image pred = get_network_image(net);
         image prmask = mask_to_rgb(pred);
         show_image(prmask, "Segmenter", 10);
-        
+
         free_image(in_s);
         free_image(in);
         free_image(prmask);

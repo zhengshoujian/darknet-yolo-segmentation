@@ -124,7 +124,7 @@ __global__ void dot_kernel(float *output, float scale, int batch, int n, int siz
     int f1 = index / n;
     int f2 = index % n;
     if (f2 <= f1) return;
-    
+
     float sum = 0;
     float norm1 = 0;
     float norm2 = 0;
@@ -167,7 +167,7 @@ __global__ void adam_kernel(int N, float *x, float *m, float *v, float B1, float
 
     float mhat = m[index] / (1.f - powf(B1, t));
     float vhat = v[index] / (1.f - powf(B2, t));
-    
+
     x[index] = x[index] + rate * mhat / (sqrtf(vhat) + eps);
 }
 
@@ -196,7 +196,7 @@ __global__ void normalize_kernel(int N, float *x, float *mean, float *variance, 
     int index = (blockIdx.x + blockIdx.y*gridDim.x) * blockDim.x + threadIdx.x;
     if (index >= N) return;
     int f = (index/spatial)%filters;
-    
+
     x[index] = (x[index] - mean[f])/(sqrtf(variance[f] + .00001f));
 }
 
@@ -205,7 +205,7 @@ __global__ void normalize_delta_kernel(int N, float *x, float *mean, float *vari
     int index = (blockIdx.x + blockIdx.y*gridDim.x) * blockDim.x + threadIdx.x;
     if (index >= N) return;
     int f = (index/spatial)%filters;
-    
+
     delta[index] = delta[index] * 1.f/(sqrtf(variance[f] + .00001f)) + variance_delta[f] * 2.f * (x[index] - mean[f]) / (spatial * batch) + mean_delta[f]/(spatial*batch);
 }
 
@@ -452,7 +452,11 @@ __global__ void fill_kernel(int N, float ALPHA, float *X, int INCX)
 __global__ void copy_kernel(int N,  float *X, int OFFX, int INCX, float *Y, int OFFY, int INCY)
 {
     int i = (blockIdx.x + blockIdx.y*gridDim.x) * blockDim.x + threadIdx.x;
-    if(i < N) Y[i*INCY + OFFY] = X[i*INCX + OFFX];
+    if(i < N)
+    {
+        Y[i*INCY + OFFY] = X[i*INCX + OFFX];
+        //printf("the output of the point in image is %f\n", Y[i*INCY + OFFY]);
+    }
 }
 
 __global__ void mul_kernel(int N, float *X, int INCX, float *Y, int INCY)
@@ -774,6 +778,9 @@ __global__ void softmax_x_ent_kernel(int n, float *pred, float *truth, float *de
         float t = truth[i];
         float p = pred[i];
         error[i] = (t) ? -log(p) : 0;
+        if(t>0){
+        printf("the truth label is %f  ------ the pred value is %f\n", t, p);
+        }
         delta[i] = t-p;
     }
 }
@@ -786,11 +793,21 @@ extern "C" void softmax_x_ent_gpu(int n, float *pred, float *truth, float *delta
 
 __global__ void logistic_x_ent_kernel(int n, float *pred, float *truth, float *delta, float *error)
 {
+    int j,k;
     int i = (blockIdx.x + blockIdx.y*gridDim.x) * blockDim.x + threadIdx.x;
+    float t_truth;
     if(i < n){
-        float t = truth[i];
+        //float t = truth[i];
         float p = pred[i];
-        error[i] = -t*log(p+.0000001) - (1-t)*log(1-p+.0000001);
+        float t = truth[i];
+        //if(t!=0) printf("the truth label is %f\n ", t);
+
+        //float p = pred[i];
+        //if(t<0.05){
+        //printf("the truth label is %f  ------ the pred value is %f\n", t, p);
+         //}
+        error[i] = -t*log(p+.0000001) - (t_truth-t)*log(1-p+.0000001);
+        //delta[i] = t-p;
         delta[i] = t-p;
     }
 }
