@@ -13,4 +13,4 @@ This project is based on darknet to get image segmentation
 3、with the command "./darknet segmenter test the/path/to/cfg/data the/paht/to/cfg/file the/path/to/weights/files the/paht/to/cfg/file the/path/to/image "
 
 
-we will update our code on time, if you want get cfg/file and weights file,you can contact me by email at:2239779352@qq.com or my teammate gaoyang at gaoyang917528@163.com
+we will update our code on time, if you want to get cfg/file and weights file, please contact me by email at:2239779352@qq.com or my teammate gaoyang at gaoyang917528@163.com
