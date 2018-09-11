@@ -14,4 +14,4 @@ This project is based on darknet to get image segmentation
 
 
 
-if you want get cfg/file and weights file,you can contact me at:2239779352@qq.com or my teammate gaoyang at gaoyang917528@163.com
+if you want get cfg/file and weights file,you can contact me by email at:2239779352@qq.com or my teammate gaoyang at gaoyang917528@163.com
