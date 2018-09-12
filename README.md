@@ -6,7 +6,7 @@ This project is based on darknet to get image segmentation
 
 
 
-2、with the command "./darknet segmenter train the/path/to/cfg/data the/paht/to/cfg/file the/path/to/weights/files" to train
+2、with the command "./darknet segmenter train the/path/to/cfg/data the/paht/to/cfg/file the/path/to/weights/files" to train on your data
 
 
 
