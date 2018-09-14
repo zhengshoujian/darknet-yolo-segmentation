@@ -25,12 +25,8 @@ def mask(img,img1):
    cv2.imwrite("leftImg8bit.png",img1)
    return img1
  
- 
- 
 im = cv2.imread("pred.png",cv2.IMREAD_GRAYSCALE)
 im1 = cv2.imread("orig.png")
-
-
 
 
 if __name__ == '__main__':
