@@ -13,7 +13,10 @@ This project is based on darknet to get image segmentation
 3、with the command "./darknet segmenter test the/path/to/cfg/data the/paht/to/cfg/file the/path/to/weights/files the/paht/to/cfg/file the/path/to/image " to test your results
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 71923982e99e2b59011d45a9c39a0f67395fafa0
 4、 run "python replay.py" to get mask
 
 we will update our code on time, if you want to get cfg/file and weights file, please contact me by email at:2239779352@qq.com or my teammate gaoyang at:gaoyang917528@163.com
