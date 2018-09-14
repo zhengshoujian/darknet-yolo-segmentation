@@ -18,6 +18,7 @@ def mask(img,img1):
      for i in range(0, height):
         for j in range(0, width):
            if(img[i,j] >90):
+            #here 90 is Threshold for heatmap
             #print im1[i,j]
             img1[i,j,1] = 100+img1[i,j,1]
 			
