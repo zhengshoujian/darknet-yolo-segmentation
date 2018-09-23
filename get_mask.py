@@ -2,7 +2,7 @@
 """
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #
-# fileName : replay.py
+# fileName : get_mask.py
 # comment  : comment here
 # version  : 1.0
 # author   : zhengshoujian
