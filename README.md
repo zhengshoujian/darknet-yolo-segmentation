@@ -14,6 +14,6 @@ This project is based on darknet to get image segmentation
 
 
 
-4、 run "python replay.py" to get mask
+4、 run "python get_mask.py" to get mask
 
 we will update our code on time, if you want to get cfg/file and weights file, please contact me by email at:2239779352@qq.com or my teammate gaoyang at:gaoyang917528@163.com
