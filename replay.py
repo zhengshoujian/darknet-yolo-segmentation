@@ -22,7 +22,7 @@ def mask(img,img1):
             #print im1[i,j]
             img1[i,j,1] = 100+img1[i,j,1]
 			
-   cv2.imwrite("leftImg8bit.png",img1)
+   cv2.imwrite("result.png",img1)
    return img1
  
 im = cv2.imread("pred.png",cv2.IMREAD_GRAYSCALE)
