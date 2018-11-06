@@ -8,7 +8,7 @@ This project is based on darknet to get image segmentation
 
 
 2、"./darknet segmenter train the/path/to/cfg/data the/paht/to/cfg/file the/path/to/weights/files" 
-   train on your own data
+    train on your own data
 
 
 
