@@ -6,7 +6,7 @@
 # comment  : comment here
 # version  : 1.0
 # author   : zhengshoujian
-# date     : xxxx-xx-xx
+# date     : 2018-10-05
 #
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """
