@@ -10,7 +10,7 @@ This project is based on darknet to get image segmentation
 
 
 
-3、"./darknet segmenter test the/path/to/cfg/data the/path/to/cfg/file the/path/to/weights/files the/path/to/image "    ------test your trained network
+3、"./darknet segmenter test the/path/to/cfg/data the/path/to/cfg/file the/path/to/weights/files the/path/to/image "  ------test your trained network
 
 
 
