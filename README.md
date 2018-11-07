@@ -21,3 +21,6 @@ This project is based on darknet to get image segmentation
 -----this python script is to get mask
 
 I will update our code on time, if you want to get cfg/file and weights file, please contact me by email at:2239779352@qq.com
+
+I have wrote a blog in csdn about overall project in chinese. website:https://blog.csdn.net/m0_37726996/article/details/83820147
+
