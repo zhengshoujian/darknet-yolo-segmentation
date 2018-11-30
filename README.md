@@ -22,6 +22,8 @@ This project is based on darknet to get image segmentation
 
 input image:
 ![Image text](https://github.com/zhengshoujian/darknet-yolo-segmentation/blob/master/origing.png)
+binary image:
+![Image text](https://github.com/zhengshoujian/darknet-yolo-segmentation/blob/master/pred1.png)
 output image:
 ![Image text](https://github.com/zhengshoujian/darknet-yolo-segmentation/blob/master/result1.png)
 
