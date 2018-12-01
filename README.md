@@ -20,6 +20,8 @@ This project is based on darknet to get image segmentation
 4、 "python get_mask.py"         
 -----this python script is to get mask
 
+I will update our code on time, if you want to get cfg/file and weights file, please contact me by email at:2239779352@qq.com
+
 input image:
 ![Image text](https://github.com/zhengshoujian/darknet-yolo-segmentation/blob/master/origing.png)
 binary image:
@@ -28,4 +30,4 @@ output image:
 ![Image text](https://github.com/zhengshoujian/darknet-yolo-segmentation/blob/master/result1.png)
 
 
-I will update our code on time, if you want to get cfg/file and weights file, please contact me by email at:2239779352@qq.com
+
