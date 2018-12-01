@@ -21,6 +21,7 @@ This project is based on darknet to get image segmentation
 -----this python script is to get mask
 
 The test video is here:https://youtu.be/IWgyoBr6CZI
+
 I will update our code on time, if you want to get cfg/file and weights file, please contact me by email at:2239779352@qq.com
 
 input image:
