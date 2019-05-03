@@ -24,7 +24,7 @@ The test video is here:https://youtu.be/IWgyoBr6CZI
 
 I have uploaded the cfg file(segment12.cfg) and weights file(segment12.backup) in folder weights, if you are interested in it, you can check it yourself.
 
-I will update my code on time, if you want to get cfg/file and weights file, please contact me by email at:2239779352@qq.com
+please don't hesitate to contact me by email at:1731381@tongji.edu.cn if you have any problem.
 
 input image:
 ![Image text](https://github.com/zhengshoujian/darknet-yolo-segmentation/blob/master/origing.png)
