@@ -22,7 +22,6 @@ This project is based on darknet to get image segmentation
 
 The test video is here:https://youtu.be/IWgyoBr6CZI
 
-I have uploaded the cfg file(segment12.cfg) and weights file(segment12.backup) in folder weights, if you are interested in it, you can check it yourself.
 
 please don't hesitate to contact me by email at:1731381@tongji.edu.cn if you have any problem.
 
