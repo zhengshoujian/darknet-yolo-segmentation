@@ -17,7 +17,7 @@ This project is based on darknet to get image segmentation
 
 
 
-4、 "python get_mask.py"         
+4、 "python  ./scripts/get_mask.py"         
 -----this python script is to get mask
 
 The test video is here:https://youtu.be/IWgyoBr6CZI
