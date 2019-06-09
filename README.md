@@ -2,7 +2,7 @@
 This project is based on darknet to get image segmentation
 
 
-1、"make -j6"         
+1、"make -j8"         
 -----compile the source code
 
 
